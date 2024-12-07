@@ -100,7 +100,10 @@ export const ImageUploader: React.FC<{ className?: string }> = ({
               <FormControl>
                 <div
                   {...getRootProps()}
-                  className="mx-auto flex cursor-pointer flex-col items-center justify-center gap-y-2 rounded-lg border border-foreground p-8"
+                  className={cn(
+                    "mx-auto flex cursor-pointer flex-col items-center justify-center gap-y-2 rounded-lg border border-foreground p-8",
+                    isDragActive && "border-2 border-primary"
+                  )}
                 >
                   {preview && (
                     <img
