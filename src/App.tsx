@@ -1,10 +1,14 @@
-import { Button } from "@/components/ui/button";
+import { Toaster } from "sonner";
+import { ImageUploader } from "./components/ImageUploader";
 
 function App() {
   return (
-    <div className="flex h-full items-center justify-center">
-      <Button>Upload</Button>
-    </div>
+    <>
+      <div className="flex h-full items-center justify-center">
+        <ImageUploader className="w-full max-w-md" />
+      </div>
+      <Toaster />
+    </>
   );
 }
 
